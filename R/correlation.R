@@ -77,7 +77,7 @@ correlation.default <- function(x, y, measures="all", summary=c("mean", "sd"),
   }
 
   colnames(x) <- make.names(colnames(x), unique=TRUE)
-  x <- normalize(binarize(x))
+  x <- normalize(x)
   y <- normalize(y)[,1]
 
   sapply(measures, function(f) {

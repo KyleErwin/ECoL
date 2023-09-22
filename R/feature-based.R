@@ -91,7 +91,7 @@ featurebased.default <- function(x, y, measures="all", summary=c("mean", "sd"),
   }
 
   colnames(x) <- make.names(colnames(x), unique=TRUE)
-  x <- binarize(x)
+  x <- x
   data <- data.frame(x, class=y)
 
   sapply(measures, function(f) {

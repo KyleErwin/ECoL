@@ -65,7 +65,7 @@ dimensionality.default <- function(x, y, measures="all", ...) {
   measures <- match.arg(measures, ls.dimensionality(), TRUE)
   colnames(x) <- make.names(colnames(x), unique=TRUE)
 
-  x <- binarize(x)
+  x <- x
 
   sapply(measures, function(f) {
     eval(call(paste("c", f, sep="."), x=x))
